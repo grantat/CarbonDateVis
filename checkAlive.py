@@ -22,7 +22,7 @@ def checkAlive(uri):
 
 
 def getStatus(fileName):
-    with open(fileName) as f, open('dataset-new2.csv', 'w') as out:
+    with open(fileName) as f, open('./data/dataset-new3.csv', 'w') as out:
         reader = csv.reader(f)
         writer = csv.writer(out)
         writer.writerow(["uri", "status_code"])
@@ -35,4 +35,4 @@ def getStatus(fileName):
 
 
 if __name__ == "__main__":
-    getStatus('./dataset.csv')
+    getStatus('./data/dataset.csv')

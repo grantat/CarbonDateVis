@@ -52,7 +52,7 @@ def findLastUriWritten(outFile):
 
 
 def checkDataset(fileName):
-    outFile = 'cd-json.csv'
+    outFile = './data/cd-json2.csv'
     writeType = setWriteType(outFile)
     with open(fileName) as f, open(outFile, writeType) as out:
         reader = csv.reader(f)
@@ -88,4 +88,4 @@ def checkDataset(fileName):
 
 
 if __name__ == "__main__":
-    checkDataset('./dataset.csv')
+    checkDataset('./data/dataset-cleaned.csv')
